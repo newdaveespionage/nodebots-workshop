@@ -1,7 +1,7 @@
 // require the arduino library
 var five = require('johnny-five');
 // create the board connection
-var board = five.Board();
+var board = new five.Board();
 
 // wait for the board's ready state
 board.on('ready', function(){

@@ -1,7 +1,7 @@
 // require the arduino library
 var five = require('johnny-five');
 // create the board connection
-var board = five.Board();
+var board = new five.Board();
 
 // reset function for realigning servo
 function reset(){
@@ -13,7 +13,7 @@ function reset(){
 board.on('ready', function () {
 
 	// five.Servo takes a pin number for the constructor
-	var servo = five.Servo(9);
+	var servo = new five.Servo(9);
 
 	// sweep takes an argument of degrees
 	servo.sweep(180);
